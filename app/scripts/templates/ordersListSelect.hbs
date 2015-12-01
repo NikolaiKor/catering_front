@@ -1,0 +1,7 @@
+<p>Your orders for {{model.start}} - {{model.finish}}</p>
+<select id="sprint">
+    {{#each collection}}
+        <option value="{{this.id}}">{{this.start}} - {{this.finish}}</option>
+    {{/each}}
+</select>
+<div id="order_list"></div>

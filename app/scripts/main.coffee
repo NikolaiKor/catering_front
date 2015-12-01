@@ -1,5 +1,6 @@
 #/*global require*/
 'use strict'
+window.root_path = '127.0.0.1/api/v1'
 
 require.config
   shim: {
@@ -17,6 +18,7 @@ require.config
     handlebars: '../bower_components/handlebars/handlebars'
 
 require [
-  'backbone'
-], (Backbone) ->
-  Backbone.history.start()
+    'backbone',
+    'app'
+], (Backbone, App) ->
+    App.initialize()

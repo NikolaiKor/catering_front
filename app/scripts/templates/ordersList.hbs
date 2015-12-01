@@ -1,0 +1,13 @@
+{{#each days}}
+    <div type="day_order">
+        <b>{{this.day}}, {{this.date}}</b><br>
+        <ol>
+            {{#each this.meals}}
+                <li>
+                    {{this.name}}
+                    {{{quantity this.quantity}}}
+                </li>
+            {{/each}}
+        </ol>
+    </div>
+{{/each}}
